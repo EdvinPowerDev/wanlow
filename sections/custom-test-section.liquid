@@ -1,0 +1,38 @@
+<section>
+    <div>
+        {% if section.settings.heading != blank %}
+            <h1>{{ section.settings.heading }}</h1>
+        {% endif %}
+        {% if section.settings.heading != blank %}
+            <p>{{ section.settings.subheading }}</p>
+        {% endif %}
+    </div>
+</section>
+
+
+{%  schema  %} 
+{
+    "name": "Custom Test Section",
+    "class": "custom-test-section-class",
+    "settings": 
+    [
+        {
+            "type": "text",
+            "id": "heading",
+            "label": "Ovo je Heading",
+            "default": "Edvine ovo je Test"
+        },
+        {
+            "type": "text",
+            "id": "subheading",
+            "label": "Ovo je Sub Heading",
+            "default": "Edvine ovo je Test"
+        }
+    ],
+    "presets": [
+    {
+      "name": "Custom Test Section"
+    }
+  ]
+}
+{% endschema %}
