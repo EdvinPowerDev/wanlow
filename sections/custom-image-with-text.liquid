@@ -1,0 +1,107 @@
+<section>
+  <div class="container">
+    <div class="bullet-section-content">
+      <div class="bullet-section-left">
+        <div class="bullet-section-heading">
+          <h1>
+            {{ section.settings.heading }}
+          </h1>
+
+          <img
+            src="{% if section.settings.headingImage != blank %}{{ section.settings.headingImage | image_url }}{% else %}{{ "heading-stars.png" | asset_url }}{% endif %}"
+            alt="Heading Image"
+            width=50
+            height=50>
+        </div>
+
+        <p>
+          {{ section.settings.text }}</p>
+
+        <div>
+          <ul class="bullet-points">
+            {% for bullet in section.blocks %}
+              <li class="bullet-point">
+                <img
+                  src="{% if section.settings.bulletImage != blank %}{{ section.settings.bulletImage | image_url }}{% else %}{{ "bullet-star.png" | asset_url }}{% endif %}"
+                  alt="Image"
+                  width=25
+                  height=25>
+                {{ bullet.settings.bullet }}
+              </li>
+            {% endfor %}
+          </ul>
+        </div>
+
+        <button>
+          {{ section.settings.button-text }}
+        </button>
+      </div>
+
+      <div>
+        <img
+          src="{% if section.settings.bigImage != blank %}{{ section.settings.bigImage | image_url }}{% else %}{{ "bullet-area-image.png" | asset_url }}{% endif %}"
+          alt="Image"
+          width=650
+          height=650>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+  {
+    "name": "Custom Image With Text",
+    "class": "custom-image-with-text-class",
+    "settings": [
+      {
+        "type": "text",
+        "id": "heading",
+        "label": "Heading",
+        "default": "The Welcome Box"
+      },
+      {
+        "type": "textarea",
+        "id": "text",
+        "label": "Text Below Heading",
+        "default": "For the first delivery, every child receives the Welcome Box which is packed full of everything they’ll need to kick off their outdoor fun of learning and discovery!"
+      },
+      {
+        "type": "image_picker",
+        "id": "bigImage",
+        "label": "Big Image"
+      },
+      {
+        "type": "image_picker",
+        "id": "bulletImage",
+        "label": "Bullet Image"
+      }, {
+        "type": "image_picker",
+        "id": "headingImage",
+        "label": "Heading Image"
+      }, {
+        "type": "text",
+        "id": "button-text",
+        "default": "Get Your First Box",
+        "label": "Button Text"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "bullet-points",
+        "name": "Bullet Points",
+        "settings": [
+          {
+            "type": "text",
+            "id": "bullet",
+            "label": "Bullet"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Custom Bullet Section"
+      }
+    ]
+  }
+{% endschema %}

@@ -1,0 +1,10 @@
+<div class="hiw-card">
+  <img
+    src="{% if card_image != blank %}{{ card_image | image_url }}{% else %}{{ "hero-image-left.png" | asset_url }}{% endif %}"
+    alt="{{ card_heading }}"
+    width=280
+    height=280>
+  <h2>{{ card_number }}</h2>
+  <h3>{{ card_heading }}</h3>
+  <p>{{ card_text }}</p>
+</div>

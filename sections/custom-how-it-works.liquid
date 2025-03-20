@@ -1,0 +1,96 @@
+<section class="how-it-works-section">
+  <div class="container">
+    <h1>{{ section.settings.heading }}</h1>
+
+    <div class="hiw-cards">
+      {% render 'custom-hiw-card', card_image: section.settings.card-image-1 | image_url: width: 500, card_number: section.settings.card-numb-1, card_heading: section.settings.card-head-1, card_text: section.settings.card-text-1
+      %}
+
+      {% render 'custom-hiw-card', card_image: section.settings.card-image-2 | image_url: width: 500, card_number: section.settings.card-numb-2, card_heading: section.settings.card-head-2, card_text: section.settings.card-text-2
+      %}
+
+      {% render 'custom-hiw-card', card_image: section.settings.card-image-3 | image_url: width: 500, card_number: section.settings.card-numb-3, card_heading: section.settings.card-head-3, card_text: section.settings.card-text-3
+      %}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+  {
+    "name": "How It Works",
+    "class": "custom-how-it-works-section-class",
+    "settings": [
+      {
+        "type": "text",
+        "default": "How It Works",
+        "id": "heading",
+        "label": "Heading"
+      },
+      {
+        "type": "image_picker",
+        "id": "card-image-1",
+        "label": "Card Image 1"
+      },
+      {
+        "type": "text",
+        "default": "1",
+        "id": "card-numb-1",
+        "label": "Card Number 1"
+      },
+      {
+        "type": "text",
+        "default": "Order Your First Box",
+        "id": "card-head-1",
+        "label": "Card Heading 1"
+      }, {
+        "type": "text",
+        "default": "You’ll start with the Welcome Box, followed by 12 amazing boxes to discover",
+        "id": "card-text-1",
+        "label": "Card Text 1"
+      }, {
+        "type": "image_picker",
+        "id": "card-image-2",
+        "label": "Card Image 2"
+      }, {
+        "type": "text",
+        "default": "2",
+        "id": "card-numb-2",
+        "label": "Card Number 2"
+      }, {
+        "type": "text",
+        "default": "Delivered To Your Door",
+        "id": "card-head-2",
+        "label": "Card Heading 2"
+      }, {
+        "type": "text",
+        "default": "Check your mailbox monthly",
+        "id": "card-text-2",
+        "label": "Card Text 2"
+      }, {
+        "type": "image_picker",
+        "id": "card-image-3",
+        "label": "Card Image 3"
+      }, {
+        "type": "text",
+        "default": "3",
+        "id": "card-numb-3",
+        "label": "Card Number 3"
+      }, {
+        "type": "text",
+        "default": "Get Outside And Have Some Fun",
+        "id": "card-head-3",
+        "label": "Card Heading 3"
+      }, {
+        "type": "text",
+        "default": "In the backyard or the backcountry, Wanlow is designed to inspire kids to spend more time outdoors",
+        "id": "card-text-3",
+        "label": "Card Text 3"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Custom How It Works"
+      }
+    ]
+  }
+{% endschema %}
