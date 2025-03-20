@@ -9,232 +9,91 @@
  */
 {
   "sections": {
-    "image_banner": {
-      "type": "image-banner",
+    "custom_hero_e6xrQW": {
+      "type": "custom-hero",
+      "settings": {
+        "heading": "Get Outside!",
+        "text-color": "#000000",
+        "description": "Monthly subscription box designed to get kids excited to spend more time outdoors and less time inside with their digital devices!",
+        "button_text": "Get Started"
+      }
+    },
+    "custom_how_it_works_arncNd": {
+      "type": "custom-how-it-works",
+      "settings": {
+        "heading": "How It Works",
+        "card-numb-1": "1",
+        "card-head-1": "Order Your First Box",
+        "card-text-1": "You’ll start with the Welcome Box, followed by 12 amazing boxes to discover",
+        "card-numb-2": "2",
+        "card-head-2": "Delivered To Your Door",
+        "card-text-2": "Check your mailbox monthly",
+        "card-numb-3": "3",
+        "card-head-3": "Get Outside And Have Some Fun",
+        "card-text-3": "In the backyard or the backcountry, Wanlow is designed to inspire kids to spend more time outdoors"
+      }
+    },
+    "custom_image_with_text_JfeqhE": {
+      "type": "custom-image-with-text",
+      "settings": {
+        "heading": "The Welcome Box",
+        "text": "For the first delivery, every child receives the Welcome Box which is packed full of everything they’ll need to kick off their outdoor fun of learning and discovery!",
+        "button-text": "Get Your First Box"
+      }
+    },
+    "custom_images_note_section_9EaQGW": {
+      "type": "custom-images-note-section",
+      "settings": {
+        "heading": "Outdoor Fun Continues Each Month",
+        "subheading": "Each new box comes with products, activities, and a booklet with learning material and games",
+        "noteText": "You can expect lots of different themes all built around learning and spending time outdoors like Animals, Star Gazing, Gardening, Parks, Outdoor Crafts & Games, and many more!"
+      }
+    },
+    "custom_images_note_section_itqGbN": {
+      "type": "custom-images-note-section",
+      "settings": {
+        "heading": "Outdoor Fun Continues Each Month",
+        "subheading": "Each new box comes with products, activities, and a booklet with learning material and games",
+        "noteText": "You can expect lots of different themes all built around learning and spending time outdoors like Animals, Star Gazing, Gardening, Parks, Outdoor Crafts & Games, and many more!"
+      }
+    },
+    "custom_reviews_Tk877k": {
+      "type": "custom-reviews",
       "blocks": {
-        "heading": {
-          "type": "heading",
+        "review_pqX3JR": {
+          "type": "review",
           "settings": {
-            "heading": "Image banner",
-            "heading_size": "h0"
-          }
-        },
-        "text": {
-          "type": "text",
-          "settings": {
-            "text": "Give customers details about the banner image(s) or content on the template.",
-            "text_style": "body"
-          }
-        },
-        "button": {
-          "type": "buttons",
-          "settings": {
-            "button_label_1": "Shop all",
-            "button_link_1": "shopify://collections/all",
-            "button_style_secondary_1": true,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
+            "review_text": "This is the best outdoor experience I've ever had!",
+            "reviewer_name": "John D."
           }
         }
       },
       "block_order": [
-        "heading",
-        "text",
-        "button"
+        "review_pqX3JR"
       ],
-      "settings": {
-        "image_overlay_opacity": 40,
-        "image_height": "large",
-        "image_behavior": "none",
-        "desktop_content_position": "bottom-center",
-        "desktop_content_alignment": "center",
-        "show_text_box": false,
-        "color_scheme": "scheme-3",
-        "stack_images_on_mobile": false,
-        "mobile_content_alignment": "center",
-        "show_text_below": false
-      }
+      "settings": {}
     },
-    "rich_text": {
-      "type": "rich-text",
+    "custom_image_slider_PbKzEc": {
+      "type": "custom-image-slider",
       "blocks": {
-        "heading": {
-          "type": "heading",
-          "settings": {
-            "heading": "Talk about your brand",
-            "heading_size": "h1"
-          }
-        },
-        "text": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.</p>"
-          }
+        "images_qRwkbM": {
+          "type": "images",
+          "settings": {}
         }
       },
       "block_order": [
-        "heading",
-        "text"
+        "images_qRwkbM"
       ],
-      "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "center",
-        "color_scheme": "scheme-1",
-        "full_width": true,
-        "padding_top": 40,
-        "padding_bottom": 0
-      }
-    },
-    "featured_collection": {
-      "type": "featured-collection",
-      "settings": {
-        "collection": "all",
-        "products_to_show": 8,
-        "title": "Featured products",
-        "heading_size": "h2",
-        "description": "",
-        "show_description": false,
-        "description_style": "body",
-        "columns_desktop": 4,
-        "enable_desktop_slider": false,
-        "full_width": false,
-        "show_view_all": false,
-        "view_all_style": "solid",
-        "color_scheme": "scheme-1",
-        "image_ratio": "adapt",
-        "image_shape": "default",
-        "show_secondary_image": true,
-        "show_vendor": false,
-        "show_rating": false,
-        "quick_add": "none",
-        "columns_mobile": "2",
-        "swipe_on_mobile": false,
-        "padding_top": 28,
-        "padding_bottom": 36
-      }
-    },
-    "collage": {
-      "type": "collage",
-      "blocks": {
-        "collection-0": {
-          "type": "collection",
-          "settings": {
-            "collection": ""
-          }
-        },
-        "product": {
-          "type": "product",
-          "settings": {
-            "product": "",
-            "second_image": false
-          }
-        },
-        "collection-1": {
-          "type": "collection",
-          "settings": {
-            "collection": ""
-          }
-        }
-      },
-      "block_order": [
-        "collection-0",
-        "product",
-        "collection-1"
-      ],
-      "settings": {
-        "heading": "Multimedia collage",
-        "heading_size": "h2",
-        "desktop_layout": "left",
-        "mobile_layout": "collage",
-        "card_styles": "product-card-wrapper",
-        "color_scheme": "scheme-1",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "video": {
-      "type": "video",
-      "settings": {
-        "heading": "",
-        "heading_size": "h1",
-        "enable_video_looping": false,
-        "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
-        "description": "",
-        "full_width": false,
-        "color_scheme": "scheme-1",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "multicolumn": {
-      "type": "multicolumn",
-      "blocks": {
-        "column1": {
-          "type": "column",
-          "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column2": {
-          "type": "column",
-          "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column3": {
-          "type": "column",
-          "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
-            "link_label": "",
-            "link": ""
-          }
-        }
-      },
-      "block_order": [
-        "column1",
-        "column2",
-        "column3"
-      ],
-      "settings": {
-        "title": "",
-        "heading_size": "h1",
-        "image_width": "third",
-        "image_ratio": "adapt",
-        "button_label": "",
-        "button_link": "",
-        "columns_desktop": 3,
-        "column_alignment": "center",
-        "background_style": "none",
-        "color_scheme": "scheme-1",
-        "columns_mobile": "1",
-        "swipe_on_mobile": false,
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "custom_test_section_JMn3LX": {
-      "type": "custom-test-section",
-      "settings": {
-        "heading": "Edvine ovo je Test",
-        "subheading": "Edvine ovo je Test"
-      }
+      "settings": {}
     }
   },
   "order": [
-    "image_banner",
-    "rich_text",
-    "featured_collection",
-    "collage",
-    "video",
-    "multicolumn",
-    "custom_test_section_JMn3LX"
+    "custom_hero_e6xrQW",
+    "custom_how_it_works_arncNd",
+    "custom_image_with_text_JfeqhE",
+    "custom_images_note_section_9EaQGW",
+    "custom_images_note_section_itqGbN",
+    "custom_reviews_Tk877k",
+    "custom_image_slider_PbKzEc"
   ]
 }
