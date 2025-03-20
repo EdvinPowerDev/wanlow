@@ -1,0 +1,147 @@
+<section class="reviews-section">
+  <div class="container">
+    <h1>What Are Our Adventurers Saying</h1>
+
+    <div class="reviews-wrapper">
+      <button class="arrow-button">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="38"
+          height="38"
+          viewBox="0 0 38 38">
+          <g
+            id="Component_16_6"
+            data-name="Component 16 – 6"
+            transform="translate(38 38) rotate(180)">
+          <rect
+            id="Rectangle_63"
+            data-name="Rectangle 63"
+            width="38"
+            height="38"
+            rx="3"
+            fill="#fff" />
+          <g
+            id="Icon_feather-arrow-right"
+            data-name="Icon feather-arrow-right"
+            transform="translate(2.794 2.602)">
+            <path
+              id="Path_67"
+              data-name="Path 67"
+              d="M7.5,18H23.206"
+              transform="translate(0 -1.576)"
+              fill="none"
+              stroke="#483729"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="1" />
+            <path
+              id="Path_68"
+              data-name="Path 68"
+              d="M18,7.5l6.551,4.974L18,17.449"
+              transform="translate(-0.345 3.949)"
+              fill="none"
+              stroke="#483729"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="1" />
+          </g>
+        </g>
+      </svg>
+    </button>
+
+    <div class="reviews-slider">
+      {% for block in section.blocks %}
+        <div class="review-slide">
+          <img
+            src="assets/stars.png"
+            alt="Stars"
+            width="120"
+            height="20">
+          <p class="review-text">{{ block.settings.review_text }}</p>
+          <p class="review-author">- {{ block.settings.reviewer_name }}</p>
+        </div>
+      {% endfor %}
+    </div>
+
+    <button class="arrow-button">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="38"
+        height="38"
+        viewBox="0 0 38 38">
+        <g
+          id="Component_16_6"
+          data-name="Component 16 – 6"
+          transform="">
+        <rect
+          id="Rectangle_63"
+          data-name="Rectangle 63"
+          width="38"
+          height="38"
+          rx="3"
+          fill="#fff" />
+        <g
+          id="Icon_feather-arrow-right"
+          data-name="Icon feather-arrow-right"
+          transform="translate(2.794 2.602)">
+          <path
+            id="Path_67"
+            data-name="Path 67"
+            d="M7.5,18H23.206"
+            transform="translate(0 -1.576)"
+            fill="none"
+            stroke="#483729"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="1" />
+          <path
+            id="Path_68"
+            data-name="Path 68"
+            d="M18,7.5l6.551,4.974L18,17.449"
+            transform="translate(-0.345 3.949)"
+            fill="none"
+            stroke="#483729"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="1" />
+        </g>
+      </g>
+    </svg>
+  </button>
+</div></div></section>{% schema %}
+{
+  "name": "Reviews Section",
+  "class": "reviews-class",
+  "settings": [],
+  "blocks": [
+    {
+      "type": "review",
+      "name": "Review",
+      "settings": [
+        {
+          "type": "textarea",
+          "id": "review_text",
+          "label": "Review Text",
+          "default": "This is the best outdoor experience I've ever had!"
+        }, {
+          "type": "text",
+          "id": "reviewer_name",
+          "label": "Reviewer Name",
+          "default": "John D."
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Custom Reviews Section",
+      "blocks": [
+        {
+          "type": "review"
+        }, {
+          "type": "review"
+        }
+      ]
+    }
+  ]
+}{% endschema %}

@@ -1,0 +1,36 @@
+<section class="image-slider-section">
+  <div class="container">
+    <h1>Join Our Community!</h1>
+  </div>
+</section>
+
+{% schema %}
+  {
+    "name": "Image Slider Section",
+    "class": "image-slider-class",
+    "settings": [],
+    "blocks": [
+      {
+        "type": "images",
+        "name": "Images",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Custom Image Slider Section",
+        "blocks": [
+          {
+            "type": "images"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}

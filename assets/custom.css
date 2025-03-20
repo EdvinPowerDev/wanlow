@@ -160,3 +160,127 @@
     align-items: center;
     margin-bottom: 30px;
 }
+
+.image-with-note-section {
+    background-image: url('{{ "bg-blue.png" | asset_url }}');
+}
+
+.image-with-note-content {
+    display: flex;
+    padding-top: 400px;
+    flex-direction: column;
+    text-align: center;
+}
+
+.image-with-note-content h1 {
+    font-family: "Mouse Memoirs", sans-serif;
+    font-size: 50px;
+    color: #483729;
+    margin: 0;
+}
+
+.image-with-note-content p {
+    position: relative;
+    font-family: "Noto Sans Display", sans-serif;
+    font-size: 18px;
+    color: #483729;
+    margin: 10px 0px;
+}
+
+.note {
+    position: absolute;
+    background-color: white;
+    width: 400px;
+    height: 300px;
+    padding: 30px;
+    padding-top: 0;
+    border-radius: 5px;
+    right: 0;
+}
+
+.note img {
+    object-fit: contain;
+    margin-top: -50px;
+}
+
+.images-main {
+    display: flex;
+    flex-direction: row;
+    margin-top: 30px;
+    gap: 30px;
+    justify-content: center;
+}
+
+.image-and-note {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+}
+
+.images-left {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.images-right {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.reviews-section h1 {
+    font-family: "Mouse Memoirs", sans-serif;
+    font-size: 50px;
+    color: #483729;
+    margin-top: 100px;
+    text-align: center;
+}
+
+.arrow-button {
+    padding: 0;
+    border: none;
+    cursor: pointer;
+}
+
+.reviews-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.reviews-slider p {
+    font-family: "Noto Sans Display", sans-serif;
+    font-size: 22px;
+    color: #483729;
+    text-align: center;
+    margin: 0;
+}
+
+.review-author {
+    color: #db7624 !important;
+    font-weight: 600;
+    margin-top: 30px !important;
+}
+
+.review-slide {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.review-slide img {
+    object-fit: contain;
+    margin-bottom: 15px;
+}
+
+.image-slider-section h1 {
+    font-family: "Mouse Memoirs", sans-serif;
+    font-size: 50px;
+    color: #483729;
+    margin-top: 100px;
+    text-align: center;
+}
