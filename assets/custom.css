@@ -244,13 +244,6 @@
     cursor: pointer;
 }
 
-.reviews-wrapper {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-}
-
 .reviews-slider p {
     font-family: "Noto Sans Display", sans-serif;
     font-size: 22px;
@@ -270,6 +263,13 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    min-width: 500px;
+    width: 90%;
+}
+
+.swiper {
+    display: flex;
+    justify-content: center;
 }
 
 .review-slide img {
@@ -283,4 +283,30 @@
     color: #483729;
     margin-top: 100px;
     text-align: center;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+    background: none !important; /* Remove Swiper's default background */
+    border: none;
+    width: auto;
+    height: auto;
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+    display: none !important; /* Hides Swiper's default blue arrow */
+    content: ""; /* Removes any remaining content */
+}
+
+#prevBtn {
+    left: -50px !important;
+}
+
+#nextBtn {
+    right: -50px !important;
+}
+
+.swiper-wrap {
+    position: relative;
 }

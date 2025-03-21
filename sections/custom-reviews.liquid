@@ -2,8 +2,21 @@
   <div class="container">
     <h1>What Are Our Adventurers Saying</h1>
 
-    <div class="reviews-wrapper">
-      <button class="arrow-button">
+    <div class="swiper reviews-wrapper">
+      <div class="swiper-wrapper reviews-slider">
+        {% for block in section.blocks %}
+          <div class="swiper-slide review-slide">
+            <img
+              src="assets/stars.png"
+              alt="Stars"
+              width="120"
+              height="20">
+            <p class="review-text">{{ block.settings.review_text }}</p>
+            <p class="review-author">- {{ block.settings.reviewer_name }}</p>
+          </div>
+        {% endfor %}
+      </div>
+      <button class="swiper-button-prev arrow-button">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="38"
@@ -48,22 +61,7 @@
         </g>
       </svg>
     </button>
-
-    <div class="reviews-slider">
-      {% for block in section.blocks %}
-        <div class="review-slide">
-          <img
-            src="assets/stars.png"
-            alt="Stars"
-            width="120"
-            height="20">
-          <p class="review-text">{{ block.settings.review_text }}</p>
-          <p class="review-author">- {{ block.settings.reviewer_name }}</p>
-        </div>
-      {% endfor %}
-    </div>
-
-    <button class="arrow-button">
+    <button class="swiper-button-next arrow-button">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="38"
@@ -108,7 +106,22 @@
       </g>
     </svg>
   </button>
-</div></div></section>{% schema %}
+
+</div></div></section><script type="module">
+  const swiper = new Swiper(".reviews-wrapper", {
+  loop: true,
+  slidesPerView: 1,
+  centeredSlides: true,
+  navigation: {
+    nextEl: ".swiper-button-next", 
+    prevEl: ".swiper-button-prev", 
+  },
+  autoplay: {
+    delay: 5000,
+    disableOnInteraction: false,
+  }
+});
+</script>{% schema %}
 {
   "name": "Reviews Section",
   "class": "reviews-class",
