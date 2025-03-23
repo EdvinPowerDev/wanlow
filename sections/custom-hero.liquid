@@ -35,17 +35,11 @@
     background: url('{% if section.settings.right_image != blank %} {{ section.settings.right_image | image_url: width: 1500 }} {% else %} {{ "hero-image-right.png" | asset_url }} {% endif %}');
   }
   @media only screen and (max-width: 650px) {
+
   .hero-section::before,
   .hero-section::after {
     width: 100%;
-    height: 50%;
-  }
-  .hero-section::after {
-    top: 677px;
-  }
-
-  .hero-section {
-    height: 1354px;
+    height: 100%;
   }
 }
 {% endstyle %}
