@@ -1,19 +1,57 @@
 <section class="how-it-works-section">
   <div class="container">
     <h1>{{ section.settings.heading }}</h1>
+    <div class="swiper hiw-swiper">
+      <div class="swiper-wrapper hiw-cards">
+        {% render 'custom-hiw-card', 
+        card_image: section.settings.card-image-1 | image_url: width: 500, 
+        card_number: section.settings.card-numb-1, 
+        card_heading: section.settings.card-head-1, 
+        card_text: section.settings.card-text-1
+        %}
+  
+        {% render 'custom-hiw-card', 
+        card_image: section.settings.card-image-2 | image_url: width: 500, 
+        card_number: section.settings.card-numb-2, 
+        card_heading: section.settings.card-head-2, 
+        card_text: section.settings.card-text-2
+        %}
+  
+        {% render 'custom-hiw-card', 
+        card_image: section.settings.card-image-3 | image_url: width: 500, 
+        card_number: section.settings.card-numb-3, 
+        card_heading: section.settings.card-head-3, 
+        card_text: section.settings.card-text-3
+        %}
+      </div>
 
-    <div class="hiw-cards">
-      {% render 'custom-hiw-card', card_image: section.settings.card-image-1 | image_url: width: 500, card_number: section.settings.card-numb-1, card_heading: section.settings.card-head-1, card_text: section.settings.card-text-1
-      %}
-
-      {% render 'custom-hiw-card', card_image: section.settings.card-image-2 | image_url: width: 500, card_number: section.settings.card-numb-2, card_heading: section.settings.card-head-2, card_text: section.settings.card-text-2
-      %}
-
-      {% render 'custom-hiw-card', card_image: section.settings.card-image-3 | image_url: width: 500, card_number: section.settings.card-numb-3, card_heading: section.settings.card-head-3, card_text: section.settings.card-text-3
-      %}
     </div>
   </div>
 </section>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    if (typeof Swiper !== 'undefined') {
+      const swiper2 = new Swiper('.hiw-swiper', {
+        enabled: true,
+        slidesPerView: "auto",
+        spaceBetween: 50,
+        centeredSlides: true,
+        breakpoints: {
+          789: {
+            enabled: false,
+            spaceBetween: 0,
+            centeredSlides: false,
+          }
+        }
+      });
+    } else {
+      console.warn('Swiper not available yet');
+    }
+  });
+
+</script>
+
 
 {% schema %}
   {

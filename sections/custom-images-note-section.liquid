@@ -53,9 +53,68 @@
             height="294">
         </div>
       </div>
+
+      <div class="swiper note-image-swiper">
+        <div class="swiper-wrapper note-image-wrapper">
+          <div class="swiper-slide">
+            <img
+              src="assets/sticker.png"
+              alt=""
+              width="100"
+              height="40">
+            <p>
+              {{ section.settings.noteText }}
+            </p>
+
+            {% render 'custom-button'
+              , button_text: "Subscribe now" %}
+          </div>
+          <div class="swiper-slide">
+            <img
+            src="assets/image1.png"
+            alt="Image 1"
+            width="480"
+            height="357">
+          </div>
+          <div class="swiper-slide">
+            <img
+              src="assets/image2.png"
+              alt="Image 2"
+              width="786"
+              height="459">
+          </div>
+          <div class="swiper-slide">
+            <img
+            src="assets/image3.png"
+            alt="Image 3"
+            width="380"
+            height="527">
+          </div>
+          <div class="swiper-slide">
+            <img
+            src="assets/image4.png"
+            alt="Image 4"
+            width="380"
+            height="294">
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+  if (window.innerWidth <= 1000 && typeof Swiper !== 'undefined') {
+    new Swiper('.note-image-swiper', {
+      slidesPerView: 1,
+      spaceBetween: 20,
+      loop: true,
+    });
+  }
+});
+</script>
+
 
 {% style %}
   .image-with-note-section {
